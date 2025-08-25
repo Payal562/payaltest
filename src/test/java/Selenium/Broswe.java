@@ -18,6 +18,7 @@ public class Broswe {
         driver.findElement(By.id("chkboxOne")).click();
         driver.findElement(By.className("submit")).click();  // Uncomment this line to use EdgeDriver instead
         driver.close();
+        driver.quit();
 
 
     }

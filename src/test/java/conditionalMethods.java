@@ -14,7 +14,7 @@ public class conditionalMethods {
         WebDriver driver = new ChromeDriver();
         driver.get("https://staging-deeprootsbible.com");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
         System.out.println(driver.getCurrentUrl());
@@ -47,5 +47,5 @@ public class conditionalMethods {
         }
 
     }
-}
+
 

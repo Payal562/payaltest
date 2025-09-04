@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Broswe {
     public static void main(String[] args) {
         //System.setProperty("webdriver.chrome.driver","/Users/payal/documents/drivers/chromedriver"); // Set the path to chromedriver
-        WebDriverManager.chromedriver().setup();
+       // WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://www.rahulshettyacademy.com/locatorspractice");

@@ -7,7 +7,7 @@ public class secondclass {
     public void test3(){
         System.out.println("This is second class");
     }
-    @Test
+   @Test(groups = "{sanity}")
     public void test4(){    //method name
         System.out.println("This is second class 2nd method");
     }

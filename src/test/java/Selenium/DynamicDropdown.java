@@ -28,6 +28,7 @@ public class DynamicDropdown {
         Test1.click();
         System.out.println(Test1.getText());
         driver.close();
+        driver.quit();
 
 
     }

@@ -22,7 +22,7 @@ public class Staticdropdown {
         // When Option in this dropdown is fixed we can use static dropdown
         // its webelement with select tag
         WebElement StaticDropdown =  driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
-        // create object of select class
+        // create object of select classh
         // TESTCASE 1: To check defult value
         Select dropdown =    new Select(StaticDropdown);
         //dropdown.selectByIndex(3);// select by index

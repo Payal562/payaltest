@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
@@ -50,11 +51,32 @@ public class Practise {
         driver.findElement(By.id("country")).click();
         driver.findElement(By.xpath("//option[@value='canada']")).click();
 
-       // Sorted list
+        // Sorted list
         driver.findElement(By.xpath("(//div[@class='form-group'])[7]")).click();
         driver.findElement(By.xpath("//option[@value='cat']")).click();
         System.out.println("cat is selected");
 
+
+        //Datepicker
+        driver.findElement(By.xpath("//p[normalize-space()='Date Picker 1 (mm/dd/yyyy):']")).click();
+        driver.findElement(By.id("datepicker")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='11']")).click();
+
+        // Another Datepicker
+        driver.findElement(By.xpath("//p[contains(text(),'Date Picker 2')]")).click();
+        driver.findElement(By.id("txtDate")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='12']")).click();
+
+        //Another date picker
+        driver.findElement(By.xpath("//label[normalize-space()='Date Picker 3: (Select a Date Range)']"));
+        driver.findElement(By.className("date-picker-box"));
+        driver.findElement(By.xpath("(//input[@id='start-date'])[1]")).click();
+        driver.findElement(By.className("separator"));
+        driver.findElement(By.id("end-date")).click();
+        driver.findElement(By.className("submit-btn")).click();
+        driver.findElement(By.id("result")).getText();
+        Assert.assertEquals(driver.findElement(By.id("result")).getText(), "Please select both start and end dates.");
+        System.out.println("Both start and end dates are selected");
 
     }
 

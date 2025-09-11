@@ -3,7 +3,7 @@ package Testng;
 import org.testng.annotations.Test;
 
 public class firstclass {
-    @Test
+    @Test(groups = "{sanity}")
     public void LoginTests1()
     {
         System.out.println("Login test 1");

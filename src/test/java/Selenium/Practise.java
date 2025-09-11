@@ -69,14 +69,16 @@ public class Practise {
 
         //Another date picker
         driver.findElement(By.xpath("//label[normalize-space()='Date Picker 3: (Select a Date Range)']"));
-        driver.findElement(By.className("date-picker-box"));
-        driver.findElement(By.xpath("(//input[@id='start-date'])[1]")).click();
-        driver.findElement(By.className("separator"));
-        driver.findElement(By.id("end-date")).click();
+        driver.findElement(By.className("date-picker-box")).click();
+        driver.findElement(By.xpath("//input[@id='start-date']")).click();
+        driver.findElement(By.xpath("//input[@id='end-date']")).click();
         driver.findElement(By.className("submit-btn")).click();
-        driver.findElement(By.id("result")).getText();
+        String result = driver.findElement(By.id("result")).getText();
         Assert.assertEquals(driver.findElement(By.id("result")).getText(), "Please select both start and end dates.");
         System.out.println("Both start and end dates are selected");
+
+
+
 
     }
 
